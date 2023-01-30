@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="1.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=2c01faf2-15f0-4a0f-861c-42f4e6702a65&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+
+    <script defer src="script.js"></script>
+    <title>Бильярд в Армении</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <img src="2.png" alt="icon" class="icon" />
+
+      <ul class="workouts">
+        <form class="form hidden">
+          <div class="form1">
+            <div class="form__row">
+              <label class="form__label">Название</label>
+              <input id="inputName" class="form__input" />
+            </div>
+            <div class="form__row">
+              <label class="form__label">Адрес</label>
+              <input id="inputPhone" class="form__input" />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <label class="form__label1">Комментарии</label>
+            <input id="inputComment" class="form__input" />
+          </div>
+          <button class="form__btn">OK</button>
+        </form>
+
+        <div class="workout__details">
+          <button class="btn__udoli hidden">Удолить усё</button>
+        </div>
+
+        <div class="workout__details">
+          <button class="btn__search hidden">Поиск по названию</button>
+        </div>
+      </ul>
+
+      <div class="formUdoli hidden">
+        <h2 class="udoliHeader">Уверены?</h2>
+        <button id="btnUdoliYes" class="btn__udoli2">Да</button>
+        <button id="btnUdoliNo" class="btn__udoli2">Нет</button>
+      </div>
+
+      <div class="formSearch hidden">
+        <label class="formSearch__label"
+          >Напишите название клуба или его часть</label
+        >
+        <input id="inputSearch" class="form__input" />
+        <button class="btn__search1">Ok</button>
+        <button id="cancel" class="btn__search1">Отмена</button>
+      </div>
+
+      <p class="footer">ВЕСЬ ЕРЕВАН</p>
+    </div>
+
+    <div id="map"></div>
+  </body>
+</html>
